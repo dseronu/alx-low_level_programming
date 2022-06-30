@@ -1,9 +1,12 @@
 #include <stdio.h>
 
-/*
+/**
  *
- *  main - main block
- *  Return: 0
+ *  main - Entry point
+ *
+ *  Description: 'the program ouputs string without use of printf'
+ * 
+ * Return: 0
  *
 */
 
