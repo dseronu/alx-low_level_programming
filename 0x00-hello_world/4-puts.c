@@ -2,9 +2,9 @@
 
 /**
  *
- *    * The program returns zero
+ * The program returns zero
  *
- *     */
+*/
 
 int main(void)
 {
