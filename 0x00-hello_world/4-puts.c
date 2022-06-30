@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-/*
- *  main - Entry point
- *  Description: 'the program ouputs string without use of printf'
+/**
+ *  main - main block of function
  *  Return: 0
  *
-*/
+ */
 
 int main(void)
 
