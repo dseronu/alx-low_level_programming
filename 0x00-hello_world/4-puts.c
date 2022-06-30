@@ -1,9 +1,10 @@
-#include<stdio.h>
+#include <stdio.h>
 
-/*
- * Program to return zero 
- * at the end 
- */
+/**
+ *
+ *    * The program returns zero
+ *
+ *     */
 
 int main(void)
 {
