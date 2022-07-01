@@ -2,6 +2,7 @@
 
 /**
  *  main - main entry block
+ *  Description: prints all possible combinations of two two-digit numbers
  *  Return: 0
  */
 
@@ -27,6 +28,7 @@ int main(void)
 				}
 			}
 		}
-	}putchar('\n');	
+	}
+	putchar('\n');
 	return (0);
 }
