@@ -9,7 +9,7 @@
 int main(void)
 {
 	char lowerAlphabet;
-	
+
 	for (lowerAlphabet = 'a'; lowerAlphabet <= 'z'; lowerAlphabet++)
 	{
 		if (lowerAlphabet != 'q' && lowerAlphabet != 'e')
