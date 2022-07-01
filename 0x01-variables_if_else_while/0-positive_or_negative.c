@@ -4,8 +4,7 @@
 
 /**
  * main - main code block
- * Description: Get a random number and print the number if it 
- * is positive, negative or zero
+ * Description: Get a random number and print the number 
  * Return: Always 0 when successful
  */
 
