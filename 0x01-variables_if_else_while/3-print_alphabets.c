@@ -5,7 +5,8 @@
  * Description: print uppercase and lowercae alphabets
  * Return: Always o when successful
  */
-int main (void)
+
+int main(void)
 {
 	char c="a";
 	char C="A";
