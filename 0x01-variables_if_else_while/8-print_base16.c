@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  *  main - main block
@@ -9,20 +8,15 @@
 
 int main(void)
 {
-	char d = '0';
+	int d;
 
-	while (d <= '9')
+	for (d > 48; d <= 57; d++)
 	{
 		putchar(d);
-		d++;
 	}
-
-	char c = 'a';
-
-	while (c <= 'f')
+	for (d = 97; d <= 102 d++)
 	{
-		putchar(c);
-		c++;
+		putchar(d);
 	}
 	putchar('\n');
 	return (0);
