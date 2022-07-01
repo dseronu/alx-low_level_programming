@@ -4,14 +4,12 @@
 
 /**
  * main - main code block
- * Description: Get a random number and print the number 
  * Return: Always 0 when successful
  */
 
 int main(void)
 {
 	int n;
-	
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
