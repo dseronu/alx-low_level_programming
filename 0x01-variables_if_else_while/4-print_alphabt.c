@@ -8,17 +8,15 @@
 
 int main(void)
 {
-	char c = 'a';
-
-	while (c <= 'z')
+	char lowerAlphabet;
+	
+	for (lowerAlphabet = 'a'; lowerAlphabet <= 'z'; lowerAlphabet++)
 	{
-		if (c != 'e' && c != 'q')
+		if (lowerAlphabet != 'q' && lowerAlphabet != 'e')
 		{
-			putchar(c);
-		}	
-		c++;
+			putchar(lowerAlphabet);
+		}
 	}
 	putchar('\n');
 	return (0);
-
 }
