@@ -2,7 +2,6 @@
 
 /**
  *  main - main entry block
- *  Description: prints all possible combinations of two two-digit nuimbers 
  *  Return: 0
  */
 
