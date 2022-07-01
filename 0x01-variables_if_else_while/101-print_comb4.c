@@ -5,38 +5,31 @@
  *  Description: Prints all possible different combinations of three digits
  *  Return: 0
  */
+
 int main(void)
 {
-	int c, d , e;
-	
-	c = 48;
-	d = 48;
-	e = 48;
+	int c, i, k;
 
-	while (c < 58)
+	for (c = '0'; c <= '9'; c++)
 	{
-		d = c + 1;
-		while (d < 58)
+		for (i = '0'; i <= '9'; i++)
 		{
-			e = d + 1;
-			while (e < 58)
+			for (k = '0'; k <= '9'; k++)
 			{
+				if (c < i && i < k)
 				{
 					putchar(c);
-					putchar(d);
-					putchar(e);
-					if (c < 55 || d < 56 || e < 57)
+					putchar(i);
+					putchar(k);
+					if (c != '7')
 					{
 						putchar(',');
 						putchar(' ');
 					}
-					c++;
 				}
-				d++;
 			}
-			e++;
 		}
 	}
-	putchar(10);
+	putchar('\n');
 	return (0);
 }
