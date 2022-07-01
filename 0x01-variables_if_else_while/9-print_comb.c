@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
- *  * main - main block
- *   * Description: prints all possible combinations of singledigit numbers
- *    * Return: 0
- *      */
+ * main - main block
+ * Description: prints all possible combinations of singledigit numbers
+ * Return: 0
+ */
 
 int main(void)
 {
