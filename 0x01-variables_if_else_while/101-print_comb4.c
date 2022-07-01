@@ -7,24 +7,25 @@
  */
 int main(void)
 {
-	int c;
-	int d;
-	int e = 0;
+	int c, d , e;
+	
+	c = 48;
+	d = 48;
+	e = 48;
 
-	while (e < 10)
+	while (c < 58)
 	{
-		d = 0;
-		while (d < 10)
+		d = c + 1;
+		while (d < 58)
 		{
-			c = 0;
-			while (c < 10)
+			e = d + 1;
+			while (e < 58)
 			{
-				if (c != d && d != e && e < d && d < c)
 				{
-					putchar('0' + e);
-					putchar('0' + d);
-					putchar('0' + c);
-					if (c + d + e != 9 + 8 + 7)
+					putchar(c);
+					putchar(d);
+					putchar(e);
+					if (c < 55 || d < 56 || e < 57)
 					{
 						putchar(',');
 						putchar(' ');
@@ -36,6 +37,6 @@ int main(void)
 			e++;
 		}
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }
