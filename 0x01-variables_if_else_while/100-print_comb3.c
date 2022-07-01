@@ -1,13 +1,9 @@
 #include <stdio.h>
 
 /**
- *
- *  * main - main entry block
- *
- *   * Description: print possible different combinations of two digits
- *
- *    * Return: 0
- *
+ * main - main entry block
+ * Description: print possible different combinations of two digits
+ * Return: 0
  */
 
 int main(void)
