@@ -2,6 +2,7 @@
 
 /**
  * _islower - main block
+ * @c: integer
  * Descritption: functions that checks for lowercaser character
  * Returns: Always 0
  */
