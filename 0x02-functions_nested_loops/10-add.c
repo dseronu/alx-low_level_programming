@@ -11,5 +11,5 @@ int add(int n, int m)
 	int sum;
 	sum = n + m;
 
-	retunr(sum);
+	return(sum);
 }
