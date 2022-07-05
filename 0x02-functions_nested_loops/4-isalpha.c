@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "main.h"
 
 /**
- * main - Entry block
+ * _isalpha - checks for alphabets
+ * @c: integer
  * Descritpion: Function that checks for alphabetic character
  * Return: 0 or 1
  */
