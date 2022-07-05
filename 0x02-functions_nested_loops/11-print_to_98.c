@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_to_98 -prints all naturals numbers
+ * print_to_98 - prints all naturals numbers
  * Description: Functionthay prints all naturak numbers from n-98
  * Return: 0
  */
