@@ -1,7 +1,8 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry block
+ * print_last_digit - prints last digit
+ * @n: integer
  * Description: Prints the last digit of a number
  * Return: last digit
  */
@@ -16,5 +17,5 @@ int print_last_digit(int n)
 	}
 	_putchar(last + '0');
 	_putchar('\n');
-	return(last);
+	return (last);
 }
