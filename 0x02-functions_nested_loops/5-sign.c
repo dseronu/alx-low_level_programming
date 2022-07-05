@@ -1,9 +1,10 @@
-#include <main.h>
+#include "main.h"
 
 /**
- * main - Entry block
+ * print_sign - prints sign
+ * @n: integer
  * Description: Function that prints the sign of a number
- * Return: 0
+ * Return: 0, 1 or -1
  */
 
 int print_sign(int n)
