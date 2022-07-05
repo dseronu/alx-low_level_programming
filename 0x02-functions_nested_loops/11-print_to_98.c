@@ -4,6 +4,7 @@
 /**
  * print_to_98 - prints numbers to 98
  * Description: Functionthay prints all naturak numbers from n-98
+ * @n: integer to start by
  * Return: 0
  */
 
