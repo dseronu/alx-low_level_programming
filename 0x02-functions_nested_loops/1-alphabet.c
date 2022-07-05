@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - main block
@@ -14,5 +14,5 @@ void print_alphabet(void)
 	{
 		_putchar(lowerAlpha);
 	}
-	_putchar ('\n');
+	_putchar('\n');
 }
