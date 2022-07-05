@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Main Block
+ * print_alphabet_x10 - Entry block
  * Descritption: prints 10 times the alphabet, in lowercase
  * Return: 0
  */
