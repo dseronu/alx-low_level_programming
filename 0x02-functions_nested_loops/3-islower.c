@@ -4,7 +4,7 @@
  * _islower - main block
  * @c: integer
  * Descritption: functions that checks for lowercaser character
- * Returns: Always 0
+ * Return: return 0 or 1
  */
 
 int _islower(int c)
