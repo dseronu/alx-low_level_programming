@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * main - Entry block
+ * _abs - compute absolute value
+ * @n: integer
  * Description: Function that compute the absolute value intager
  * Return: 0
  */
