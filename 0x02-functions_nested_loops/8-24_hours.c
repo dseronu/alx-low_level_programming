@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Entry block
+ * jack_bauer - Entry block
  * Description: Prints every minute of the day ofJack Bauer
  * Return: 0
  */
