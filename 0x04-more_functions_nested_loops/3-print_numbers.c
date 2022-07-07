@@ -2,14 +2,14 @@
 
 /** 
  * print_numbers - function that prints numbers from 0 - 9
- * return: nothing;
+ * return: nothing
  */
 
 void print_numbers(void)
 {
-	int i = 48;
+	int i;
 
-	for (i = 48; i < 58; i++)
+	for (i = 0; i <= 9; i++)
 	{
 		_putchar(i);
 	}
