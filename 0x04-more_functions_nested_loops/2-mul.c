@@ -2,12 +2,12 @@ include "main.h"
 
 /**
  * mul - function that multiplies two integers
- * @a: operand 1
- * @b: operand 2
+ * @a: first number
+ * @b: second number
  * Return: 0
  */
 
 int mul(int a, int b)
 {
-	return (a * b);;
+	return (a * b);
 }
