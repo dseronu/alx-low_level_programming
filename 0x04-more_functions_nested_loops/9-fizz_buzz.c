@@ -13,21 +13,21 @@ int main(void)
         {
                 if (n % 3 == 0 && n % 5 == 0)
                 {
-                        printf("FizzBuzz ");
+                        _putchar("FizzBuzz ");
                 }
                 else if (n % 3 == 0)
                 {
-                        printf("Fizz ");
+                        _putchar("Fizz ");
                 }
                 else if (n % 5 == 0)
                 {
-                        printf("Buzz ");
+                        _putchar("Buzz ");
                 }
                 else
                 {
-                        printf("%d ", n);
+                        _putchar("%d ", n);
                 }
         }
-        printf('\n');
+        _putchar('\n');
         return 0;
 }
