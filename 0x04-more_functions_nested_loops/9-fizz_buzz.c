@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - Entry block
- * return: nothing
+ * main - Fizz Buzz code
+ * return: void
  */
 
 int main(void)
@@ -25,9 +25,8 @@ int main(void)
                 }
                 else
                 {
-                        printf("%d ", n);
+                        printf("%d"i, n);
                 }
         }
-        printf('\n');
         return 0;
 }
