@@ -25,8 +25,9 @@ int main(void)
                 }
                 else
                 {
-                        printf("%d"i, n);
+                        printf("%d ", n);
                 }
         }
+	printf('\n');
         return 0;
 }
