@@ -1,37 +1,39 @@
 #include <stdio.h>
-
 /**
- * main - Prints Fizz Buzz program
- * return: always returns 0
+ *main - entry point
+ *
+ *Return:1- success
+ *
+ *Description:prints 1-100 except mult. of 3 and 5
+ *
  */
-
 int main(void)
 {
-        int n;
+	int i;
 
-        for (n = 1; n <= 100; n++)
-        {
-                if (n % 3 == 0 && n % 5 == 0)
-                {
-                        printf("FizzBuzz ");
-                }
-                else if (n % 3 == 0)
-                {
-                        printf("Fizz ");
-                }
-                else if (n % 5 == 0)
-                {
-                        printf("Buzz ");
-                }
-                else
-                {
-                        _putchar("%d ", n);
-                }
-		if (a != 100)
+	for (i = 1; i <= 100; i++)
+	{
+		if ((i % 3) == 0 && (i % 5) == 0)
+		{
+			printf("%s", "FizzBuzz");
+		}
+		else if ((i % 3) == 0)
+		{
+			printf("%s", "Fizz");
+		}
+		else if ((i % 5) == 0)
+		{
+			printf("%s", "Buzz");
+		}
+		else
+		{
+			printf("%d", i);
+		}
+		if (i != 100)
 		{
 			printf(" ");
 		}
-        }
-        _putchar('\n');
-        return (0);
+	}
+	printf("\n");
+	return (0);
 }
