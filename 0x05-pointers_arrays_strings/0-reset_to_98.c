@@ -2,6 +2,7 @@
 
 /**
  * reset_to_98 - function that takes a pointer to an int as parameter
+ * @n: takes an integer
  * return: nothing
  */
 
