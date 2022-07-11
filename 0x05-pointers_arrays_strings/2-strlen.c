@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * int_strlen - function that returns the len of string
+ * _strlen - function that returns the len of string
  * @*s: string
  * return: always 0
  */
 
-int_strlen(char *s)
+int _strlen(char *s)
 {
 	int len;
 
