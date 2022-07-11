@@ -8,9 +8,18 @@
 
 void print_rev(char *s)
 {
-	while (s != '\0')
+	int i = 0;
+
+	while (*s != '\0')
 	{
-		printf("Print in reverse: %s\n", rev(s));
-		s++
+		s++;
+		i++;
 	}
+	while (i > 0)
+	{
+		s--;
+		_putchar(*s);
+		i++;
+	}
+	_putchar('\n');
 }
