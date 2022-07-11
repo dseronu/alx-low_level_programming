@@ -12,7 +12,9 @@ int _strlen(char *s)
 {
 	int len;
 
-	s[6]="Hello";
-	len=strlen(s);
-	return (0);
+	for(len = 0; s(len) !='\0'; len++)
+	{
+	}
+	
+	return (i);
 }
