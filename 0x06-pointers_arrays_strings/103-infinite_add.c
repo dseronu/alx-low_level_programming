@@ -1,48 +1,47 @@
 #include "main.h"
 
 /**
-* leet - Entry point
-* @s: char variable
-* Return: s
-*/
+ * infinite_add - adds two numbers
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer for result
+ * @size_r: buffer size
+ * Return: address of r or 0
+ */
 
-char *leet(char *s)
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0;
-	char rr[2][10];
+	int i, j, k, l, m, n;
 
-	rr[0][0] = 'a';
-	rr[0][1] = 'e';
-	rr[0][2] = 't';
-	rr[0][3] = 'l';
-	rr[0][4] = 'o';
-	rr[0][5] = 'A';
-	rr[0][6] = 'E';
-	rr[0][7] = 'T';
-	rr[0][8] = 'L';
-	rr[0][9] = 'O';
-	rr[1][0] = '4';
-	rr[1][1] = '3';
-	rr[1][2] = '7';
-	rr[1][3] = '1';
-	rr[1][4] = '0';
-	rr[1][5] = '4';
-	rr[1][6] = '3';
-	rr[1][7] = '7';
-	rr[1][8] = '1';
-	rr[1][9] = '0';
-
-	while (s[i])
+	for (i = 0; n1[i]; i++)
+		;
+	for (j = 0; n2[j]; j++)
+		;
+	if (i > size_r || j > size_r)
+		return (0);
+	m = 0;
+	for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
 	{
-		j = 0;
-		while (j < 10)
+		n = m;
+		if (i >= 0)
+			n += n1[i] - '0';
+		if (j >= 0)
+			n += n2[j] - '0';
+		if (i < 0 && j < 0 && n == 0)
 		{
-			if (s[i] == rr[0][j])
-				s[i] = rr[1][j];
-			j++;
+			break;
 		}
-		i++;
+		m = n / 10;
+		r[k] = n % 10 + '0';
 	}
-
-	return (s);
+	r[k] = '\0';
+	if (i >= 0 || j >= 0 || m)
+		return (0);
+	for (k -= 1, l = 0; l < k; k--, l++)
+	{
+		m = r[k];
+		r[k] = r[l];
+		r[l] = m;
+	}
+	return (r);
 }
