@@ -1,81 +1,48 @@
-#include "main.h"
-
-char *add_strings(char *n1, char *n2, char *r, int r_index);
-char *infinite_add(char *n1, char *n2, char *r, int size_r);
+#include "holberton.h"
 
 /**
- * add_strings - Adds the numbers stored in two strings.
- * @n1: The string containing the first number to be added.
- * @n2: The string containing the second number to be added.
- * @r: The buffer to store the result.
- * @r_index: The current index of the buffer.
- *
- * Return: If r can store the sum - a pointer to the result.
- *         If r cannot store the sum - 0.
- */
-char *add_strings(char *n1, char *n2, char *r, int r_index)
+* leet - Entry point
+* @s: char variable
+* Return: s
+*/
+
+char *leet(char *s)
 {
-	int num, tens = 0;
+	int i = 0, j = 0;
+	char rr[2][10];
 
-	for (; *n1 && *n2; n1--, n2--, r_index--)
+	rr[0][0] = 'a';
+	rr[0][1] = 'e';
+	rr[0][2] = 't';
+	rr[0][3] = 'l';
+	rr[0][4] = 'o';
+	rr[0][5] = 'A';
+	rr[0][6] = 'E';
+	rr[0][7] = 'T';
+	rr[0][8] = 'L';
+	rr[0][9] = 'O';
+	rr[1][0] = '4';
+	rr[1][1] = '3';
+	rr[1][2] = '7';
+	rr[1][3] = '1';
+	rr[1][4] = '0';
+	rr[1][5] = '4';
+	rr[1][6] = '3';
+	rr[1][7] = '7';
+	rr[1][8] = '1';
+	rr[1][9] = '0';
+
+	while (s[i])
 	{
-		num = (*n1 - '0') + (*n2 - '0');
-		num += tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
+		j = 0;
+		while (j < 10)
+		{
+			if (s[i] == rr[0][j])
+				s[i] = rr[1][j];
+			j++;
+		}
+		i++;
 	}
 
-	for (; *n1; n1--, r_index--)
-	{
-		num = (*n1 - '0') + tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
-	}
-
-	for (; *n2; n2--, r_index--)
-	{
-		num = (*n2 - '0') + tens;
-		*(r + r_index) = (num % 10) + '0';
-		tens = num / 10;
-	}
-
-	if (tens && r_index >= 0)
-	{
-		*(r + r_index) = (tens % 10) + '0';
-		return (r + r_index);
-	}
-
-	else if (tens && r_index < 0)
-		return (0);
-
-	return (r + r_index + 1);
-}
-/**
- * infinite_add - Adds two numbers.
- * @n1: The first number to be added.
- * @n2: The second number to be added.
- * @r: The buffer to store the result.
- * @size_r: The buffer size.
- *
- * Return: If r can store the sum - a pointer to the result.
- *         If r cannot store the sum - 0.
- */
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
-{
-	int index, n1_len = 0, n2_len = 0;
-
-	for (index = 0; *(n1 + index); index++)
-		n1_len++;
-
-	for (index = 0; *(n2 + index); index++)
-		n2_len++;
-
-	if (size_r <= n1_len + 1 || size_r <= n2_len + 1)
-		return (0);
-
-	n1 += n1_len - 1;
-	n2 += n2_len - 1;
-	*(r + size_r) = '\0';
-
-	return (add_strings(n1, n2, r, --size_r));
+	return (s);
 }
