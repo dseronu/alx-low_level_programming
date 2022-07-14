@@ -8,17 +8,18 @@
 
 char *leet(char *s)
 {
-	char alphaArr[] = "a4A4e3E3o0O0t7T7l1L1";
-	int i;
-	int j;
+	int i, ii;
+	char s1[] = "aeotl";
+	char S1[] = "AEOTL";
+	char s2[] = "43071";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; alphaArr[j] != '\0'; j++)
+		for (ii = 0; ii < 5; ii++)
 		{
-			if (s[i] == alphaArr[j])
+			if (s[i] == s1[ii] || s[i] == S1[ii])
 			{
-				s[i] = alphaArr[j + 1];
+				s[i] = s2[ii];
 				break;
 			}
 		}
