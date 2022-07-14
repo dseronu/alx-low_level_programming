@@ -6,23 +6,22 @@
  * Return: char 
  */
 
-char *leet(char *c)
+char *leet(char *s)
 {
-	char *cp = c;
-	char k[] = {'A', 'E', 'O', 'T', 'L'};
-	int v[] = {4, 3, 0, 7, 1};
-	unsigned int i;
+	char alphaArr[] = "a4A4e3E3o0O0t7T7l1L1";
+	int i;
+	int j;
 
-	while (*c)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (i = 0; i < sizeof(k) / sizeof(char); i++)
-	{
-		if (*c == k[i] || *c == k[i] + 32)
-	{
-		*c = 48 + v[i];
+		for (j = 0; alphaArr[j] != '\0'; j++)
+		{
+			if (s[i] == alphaArr[j])
+			{
+				s[i] = alphaArr[j + 1];
+				break;
+			}
+		}
 	}
-	}
-		c++;
-	}
-	return (cp);
+	return (s);
 }
