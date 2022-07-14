@@ -8,36 +8,57 @@
  * @size_r: int buffer size
  * Return:char
  */
-
-char *infinite_add(char *n1, char *n2, char *r, int n)
+int _atoi(char *s)
 {
-	int len1 = 0, len2 = 0;
-	int add = 0;
-	int i = n - 2;
+	int sign = 1, resp = 0, firstNum;
 
-
-	while (n1[len1 + 1] != 0)
-		len1++;
-	while (n2[len2 + 1] != 0)
-		len2++;
-	r[n - 1] = 0;
-
-	while (i >= 0 && (len1 >= 0 || len2 >= 0))
+	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
 	{
-		add += (len1 < 0 ? '0' : n1[len1]) + (len2 < 0 ? '0' : n2[len2]);
-		add -= 2 * '0';
-		r[i] = add % 10 + '0';
-		add /= 10;
-		i--;
-		len1--;
-		len2--;
+		if (s[firstNum] == '-')
+		{
+			sign *= -1;
+		}
 	}
 
-	if ((i < len1 || i < len2) || (i < 0 && add))
-		return (0);
+	for (int i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
+	{
+		resp *= 10;
+		resp += (s[i] - 48);
+	}
 
-	add ? r[i] = add + '0' : 1;
-	i += add ? 0 : 1;
+	return (sign * resp);
+}
 
-	return (r + i);
+void int_to_string(int n)
+{
+int divisor = 1, i, resp;
+
+
+for (i = 0; n / divisor > 9; i++)
+{
+	divisor *= 10;
+}
+
+char str[i];
+
+for (int cmpt = 0; divisor >= 10; divisor /= 10, cmpt++)
+{
+	resp = n / divisor;
+	str[cmpt] = '0' + resp;
+	n = n - resp * divisor;
+}
+str[i] = ('0' + n);
+
+}
+
+
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
+{
+    int sum, a, b;
+    a = _atoi(n1);
+    b = _atoi(n2);
+
+    sum = a + b;
+
+
 }
