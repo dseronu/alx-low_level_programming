@@ -5,14 +5,14 @@
  * @s: pointer
  * @b: constant byte
  * @n: index
- * Returns: returns pointer to the memory area s
+ * Returns: pointer s
  */
 
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
-	for (i = 0; i < n ; i++)
+	for (i = 0; i < n; i++)
 	{
 		s[i] = b;
 	}
