@@ -2,9 +2,9 @@
 
 /**
  * _strspn - gets the length of a prefix substring
- * @s:
- * @accept: 
- *
+ * @s: string to be checked
+ * @accept: string to be checked against
+ * 
  * Return: initial bytes of segment of s
  */
 
