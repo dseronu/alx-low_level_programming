@@ -19,7 +19,7 @@ int check_num(int i, int j)
 	}
 	else
 	{
-		return (check(i + 1; j));
+		return (check_num(i + 1; j));
 	}
 }
 
@@ -35,5 +35,5 @@ int is_prime_number(int n)
 	{
 		return (1);
 	}	
-	return (check(2, n));
+	return (check_num(2, n));
 }
