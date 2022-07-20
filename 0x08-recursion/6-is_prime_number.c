@@ -9,19 +9,19 @@
 
 int check_prime(int i, int j)
 {
-	if (j % i == 0)
-	{
-		return (0);
-	}
-	else if (j / 2 > n)
-	{
-		return (check_prime(n + 2, j));
-	}
-	else
+	if (j >= i && i > 1)
 	{
 		return (1);
 	}
-}
+	else if (i % j == 0 || i <= 1)
+	{
+		return (0);
+	}
+	else
+	{
+		return (check_prime(i, j + 1));
+	}
+}		
 
 /**
  * is_prime_number - function to check prime numbers
@@ -31,12 +31,5 @@ int check_prime(int i, int j)
 
 int is_prime_number(int n)
 {
-	if (!(n % 2) && (n != 2) || (n < 2))
-	{
-		return (0);
-	}
-	else
-	{	
-		return (check_prime(3, n));
-	}
+	return (check_prime(n, 2));
 }
