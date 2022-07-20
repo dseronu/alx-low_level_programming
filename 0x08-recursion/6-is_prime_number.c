@@ -7,7 +7,7 @@
  * Return: integer
  */
 
-int check_num(int i, int j)
+int check_prime(int i, int j)
 {
 	if (j < 2 || j % i == 0)
 	{
@@ -19,7 +19,7 @@ int check_num(int i, int j)
 	}
 	else
 	{
-		return (check_num(i + 1, j));
+		return (check_prime(j, i + 1));
 	}
 }
 
@@ -35,5 +35,5 @@ int is_prime_number(int n)
 	{
 		return (1);
 	}	
-	return (check_num(2, n));
+	return (check_prime(n, 2));
 }
