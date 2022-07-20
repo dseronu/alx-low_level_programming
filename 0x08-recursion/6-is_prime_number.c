@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_prime_number - function to check prime numbers
+ * check_prime - check the prime numbers
  * @i: first integer
  * @j: second integer
  * Return: integer
@@ -21,7 +21,7 @@ int check_prime(int i, int j)
 	{
 		return (check_prime(i, j + 1));
 	}
-}		
+}
 
 /**
  * is_prime_number - function to check prime numbers
