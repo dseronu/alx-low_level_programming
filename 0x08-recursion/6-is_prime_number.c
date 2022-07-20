@@ -19,7 +19,7 @@ int check_num(int i, int j)
 	}
 	else
 	{
-		return (check_num(i + 1; j));
+		return (check_num(i + 1, j));
 	}
 }
 
