@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - program that adds positive numbers
- * @argc: offset count
- * @argv: offset value
- * Return: 0
+ * @argc:integer
+ * @argv:string
+ * Return:integer
  */
 
 int main(int argc, char *argv[])
