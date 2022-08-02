@@ -1,9 +1,8 @@
 #include <stdio.h>
 /*
  * main - print the name of the file that was compiled
- * Return: int
+ * Return: 0
  */
-
 int main(void)
 {
 	printf("%s\n", __FILE__);
