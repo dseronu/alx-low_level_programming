@@ -6,84 +6,82 @@
 
 /**
  *
- * *main -  program that prints the opcodes of its own main function.
+ *  * main - prints the opcodes of its own main function
  *
- * *@argc: number of arguments passed to the program
+ *   *
  *
- * *@argv: array of arguments
+ *    * @argv: the argument that enters to the program
  *
- * *
+ *     * @argc: counts the number of arguments
  *
- * *Return: on success, 1 or 2 in case of failure
+ *      *
  *
- * */
+ *       * Return: the opcode hex number
+ *
+ *        */
 
-
-
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 
 {
 
+		int runner = 0, bytes;
 
+			/* the tasks tell us each opcode is two char long */
 
-	int index, bytes;
-
-	int (*address)(int, char **) = main;
-
-	unsigned char opcode;
-
-
-
-	if (argc != 2)
-
-	{
-
-		printf("Error\n");
-
-		exit(1);
-
-	}
+			/* if the argv is less or more then Error */
 
 
 
-	bytes = atoi(argv[1]);
+			if (argc != 2)
 
+					{
 
+								printf("Error\n");
 
-	if (bytes < 0)
+										exit(1);
 
-	{
+											}
 
-		printf("Error\n");
+				/* the argument in position one (the number the program receives) */
 
-		exit(2);
+				/* will be equal to bytes */
 
-	}
+				bytes = atoi(argv[1]);
 
+					/* condition if the number of bytes y negative (less than cero) */
 
+					/* exit status 2 and print Error */
 
-	for (index = 0; index <  bytes; index++)
+					if (bytes < 0)
 
-	{
+							{
 
-		opcode = *(unsigned char *)address;
+										printf("Error\n");
 
-		printf("%.2x", opcode);
+												exit(2);
 
+													}
 
+						/* we use runner to go through the array we receive in the argv */
 
-		if (index == bytes - 1)
+						while (runner < bytes)
 
-			continue;
+								{
 
-		printf(" ");
+											/* is pre define how to print an opcodes */
 
-		address++;
+											printf("%02hhx", *((char *)(main + runner)));
 
-	}
+													if (bytes > runner + 1)
 
-	printf("\n");
+																	printf(" ");
 
-	return (0);
+															runner++;
+
+																}
+
+							printf("\n");
+
+								return (0);
 
 }
