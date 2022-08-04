@@ -7,6 +7,8 @@
  * print_numbers - prints all numbers with a separator
  * @separator: separe numbers
  * @n: int, number of undefined arguments
+ *
+ * Retunr: nothing
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
