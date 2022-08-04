@@ -1,103 +1,44 @@
 #include "3-calc.h"
 
 /**
- * op_add - Returns the sum of two numbers
- * @a:the first number
- * @b:the second number
- * Return:The sum of a and b
+ * main - performs simple operations
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 1 for success
  */
-
-int op_add(int a, int b)
-{
-	return (a + b);
-
-}
-
-/**
- * op_sub - Returns the substraction of two numbers
- * @a:The first number
- * @b:The second number
- * Return: The Difference of a and b
- */
-
-int op_sub(int a, int b)
-
+int main(int argc, char *argv[])
 {
 
-	return (a - b);
+		register int a, b;
 
-}
-
-
-
-/**
- *
- * *op_mul - Returns the multiplication of two numbers
- *
- * *@a:The first number
- *
- * *@b: The second number
- *
- * *
- *
- * *Return: The multiplication of a and b
- *
- * */
-
-int op_mul(int a, int b)
-
-{
-
-	return (a * b);
-
-}
+			int (*fptr)(int, int);
 
 
 
+				if (argc != 4)
 
+						{
 
-/**
- *
- * *op_div - Returns the division of two numbers.
- *
- * *@a: The first number.
- *
- * *@b: The second number.
- *
- * *
- *
- * *Return: The quotient of a and b.
- *
- * */
+									printf("Error\n"), exit(98);
 
-int op_div(int a, int b)
+										}
 
-{
+					fptr = get_op_func(argv[2]);
 
-	return (a / b);
+						if (!fptr)
 
-}
+								{
 
+											printf("Error\n"), exit(99);
 
+												}
 
-/**
- *
- * *op_mod - Returns the remainder of the division of two numbers.
- *
- * *@a: The first number.
- *
- * *@b: The second number.
- *
- * *
- *
- * *Return: The remainder of the division of a by b.
- *
- * */
+							a = atoi(argv[1]);
 
-int op_mod(int a, int b)
+								b = atoi(argv[3]);
 
-{
+									printf("%i\n", fptr(a, b));
 
-	return (a % b);
+										return (1);
 
 }
