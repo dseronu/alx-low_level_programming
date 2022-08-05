@@ -1,72 +1,85 @@
 #include <stdio.h>
+
 #include <stdlib.h>
 
+
+
 /**
- * main - prints its own opcodes
- * @argc: number of arguments
- * @argv: array of arguments
- * Return: Always 0 (Success)
- */
-int main(int argc, char *argv[])
+ *
+ *  * main - prints the opcodes of its own main function
+ *
+ *   *
+ *
+ *    * @argv: the argument that enters to the program
+ *
+ *     * @argc: counts the number of arguments
+ *
+ *      *
+ *
+ *       * Return: the opcode hex number
+ *
+ *        */
+
+int main(int argc, char **argv)
 
 {
 
-		int bytes, i;
+		int runner = 0, bytes;
 
-			char *arr;
+			/* the tasks tell us each opcode is two char long */
 
-
-
-				if (argc != 2)
-
-						{
-
-									printf("Error\n");
-
-											exit(1);
-
-												}
+			/* if the argv is less or more then Error */
 
 
 
-					bytes = atoi(argv[1]);
+			if (argc != 2)
 
+					{
 
+								printf("Error\n");
 
-						if (bytes < 0)
+										exit(1);
+
+											}
+
+				/* the argument in position one (the number the program receives) */
+
+				/* will be equal to bytes */
+
+				bytes = atoi(argv[1]);
+
+					/* condition if the number of bytes y negative (less than cero) */
+
+					/* exit status 2 and print Error */
+
+					if (bytes < 0)
+
+							{
+
+										printf("Error\n");
+
+												exit(2);
+
+													}
+
+						/* we use runner to go through the array we receive in the argv */
+
+						while (runner < bytes)
 
 								{
 
-											printf("Error\n");
+											/* is pre define how to print an opcodes */
 
-													exit(2);
+											printf("%02hhx", *((char *)(main + runner)));
 
-														}
+													if (bytes > runner + 1)
 
+																	printf(" ");
 
-
-							arr = (char *)main;
-
-
-
-								for (i = 0; i < bytes; i++)
-
-										{
-
-													if (i == bytes - 1)
-
-																{
-
-																				printf("%02hhx\n", arr[i]);
-
-																							break;
-
-																									}
-
-															printf("%02hhx ", arr[i]);
+															runner++;
 
 																}
 
-									return (0);
+							printf("\n");
 
-}
+								return (0);
